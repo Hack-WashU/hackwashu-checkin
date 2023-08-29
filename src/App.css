@@ -1,0 +1,98 @@
+.app {
+  background-color: #1e1e1e;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.check-in-box-parent {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.check-in-box {
+  border-radius: 15px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: none;
+  align-items: center;
+  width: 300px !important;
+  background-color: #252526;
+  height: 200px;
+}
+
+.check-in-box > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.button {
+  background-color: #3b5bff;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  transition: ease 0.4s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #562eeb;
+}
+
+input[type="text"] {
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: #16181c;
+}
+
+input[type="text"]::placeholder {
+  color: white;
+}
+
+.t-shirt-box-parent {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.t-shirt-box {
+  margin-top: 50px;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px !important;
+  background-color: #252526;
+  height: 200px;
+}
+
+.t-shirt-box > div {
+  font-size: 200px;
+}
+
+.S {
+  color: #34a853;
+}
+
+.M {
+  color: #fbbc05;
+}
+
+.L {
+  color: #ea4335;
+}
+
+.XL {
+  color: #3b5bff;
+}
