@@ -112,6 +112,10 @@ input[type="text"]::placeholder {
   font-size: 200px;
 }
 
+.t-shirt-box > div:hover {
+  cursor: default;
+}
+
 .S {
   color: #34a853;
 }
