@@ -40,7 +40,7 @@ function App() {
       </div>
       <div className="header-error">
         <p className={error}>
-          Please show your screen to registration to receive your swag
+          Invalid email, please use the email you used to apply to our hackathon
         </p>
       </div>
       <div className="check-in-box-parent">
@@ -94,6 +94,7 @@ async function submitButton(emailValue, setError) {
   let person = sheetData.find((person) => {
     if (person.Email.toLowerCase() == emailValue.toLowerCase()) {
       shirt = person["T-shirt"];
+      addPersonToCheckInSheet(person);
     }
     return person.Email.toLowerCase() == emailValue.toLowerCase();
   });
@@ -120,6 +121,21 @@ async function submitButton(emailValue, setError) {
     console.log(error);
   }
   return shirt;
+}
+
+function addPersonToCheckInSheet(person) {
+  fetch("https://sheetdb.io/api/v1/cl5b51z2km0kn", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      data: person,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 }
 
 export default App;
